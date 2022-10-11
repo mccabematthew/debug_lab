@@ -5,7 +5,7 @@ def interpolate(x1, x2, y1, y2, x):
     y = slope * (x - x1) + y1
     return slope
 
-##### 5 MPa Data #####
+# 5 MPa Data
 # temperature in degrees C
 temp5 = [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260]
 # specific volume in m^3/kg
@@ -22,7 +22,7 @@ h5 = [5.03, 88.61, 171.95, 255.36, 338.96, 422.85, 507.19, 592.18,
 s5 = [0.0001, 0.2954, 0.5705, 0.8287, 1.0723, 1.3034, 1.5236, 1.7344,
       1.9374, 2.1338, 2.3251, 2.5127, 2.6983, 2.8841]
 
-##### 10 MPa Data #####
+# 10 MPa Data
 # temperature in degrees C
 temp10 = [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260]
 # specific volume in m^3/kg
@@ -82,4 +82,3 @@ print(f'Specific volume (m^3/kg): {v:.7f}')
 print(f'Specific internal energy (kJ/kg): {u:.2f}')
 print(f'Specific enthalpy (kJ/kg): {h:.2f}')
 print(f'Specific entropy (kJ/kgK): {s:.3f}')
-
