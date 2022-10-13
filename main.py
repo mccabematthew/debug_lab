@@ -9,7 +9,7 @@ hh = 0
 sh = 0
 
 
-def interpolate(x1, x2, y1, y2, x):
+def interpolate(x1, y1, x2, y2, x):
     # This function interpolates between two points
     slope = (y2 - y1) / (x2 - x1)
     y = slope * (x - x1) + y1
@@ -92,4 +92,4 @@ print(f'Properties at {temp} deg C and {pres} MPa are: ')
 print(f'Specific volume (m^3/kg): {v:.7f}')
 print(f'Specific internal energy (kJ/kg): {u:.2f}')
 print(f'Specific enthalpy (kJ/kg): {h:.2f}')
-print(f'Specific entropy (kJ/kgK): {s:.3f}')
+print(f'Specific entropy (kJ/kgK): {s:.4f}')
