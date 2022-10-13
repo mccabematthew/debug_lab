@@ -1,9 +1,20 @@
 
+vl = 0
+ul = 0
+hl = 0
+sl = 0
+vh = 0
+uh = 0
+hh = 0
+sh = 0
+
+
 def interpolate(x1, x2, y1, y2, x):
-    #This function interpolates between two points
+    # This function interpolates between two points
     slope = (y2 - y1) / (x2 - x1)
     y = slope * (x - x1) + y1
-    return slope
+    return y
+
 
 # 5 MPa Data
 # temperature in degrees C
@@ -39,7 +50,7 @@ h10 = [10.07, 93.28, 176.37, 259.55, 342.94, 426.62, 510.73, 595.45,
 s10 = [0.0003, 0.2943, 0.5685, 0.826, 1.0691, 1.2996, 1.5191, 1.7293,
        1.9316, 2.1271, 2.3174, 2.5037, 2.6876, 2.871]
 
-##### do calculations #####
+# do calculations
 # get temperature and pressure from user
 temp = int(input("Enter a temperature between 0 and 260 deg C: "))
 pres = float(input("Enter a pressure between 5 and 10 MPa: "))
@@ -76,8 +87,8 @@ u = interpolate(5, ul, 10, uh, pres)
 h = interpolate(5, hl, 10, hh, pres)
 s = interpolate(5, sl, 10, sh, pres)
 
-##### print results #####
-print('Properties at {pres} deg C and {temp} MPa are:')
+# print results
+print(f'Properties at {temp} deg C and {pres} MPa are: ')
 print(f'Specific volume (m^3/kg): {v:.7f}')
 print(f'Specific internal energy (kJ/kg): {u:.2f}')
 print(f'Specific enthalpy (kJ/kg): {h:.2f}')
