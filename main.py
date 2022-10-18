@@ -1,4 +1,13 @@
+# By submitting this assignment, all team members agree to the following:
+#  “Aggies do not lie, cheat, or steal, or tolerate those who do”
+#  “I have not given or received any unauthorized aid on this assignment”
+#
+# Names: Matthew McCabe, Gabriel Bailey, Malik Watkins
+# Section: 102 538
+# Assignment: Lab 8a
+# Date: 10/17/2022
 
+# variable creation preventing undefined variables
 vl = 0
 ul = 0
 hl = 0
@@ -72,7 +81,7 @@ for i in range(len(temp5)):
         break
     elif temp < temp5[i + 1]:   # if in between bounds, interpolate
         vl = interpolate(temp5[i], v5[i], temp5[i + 1], v5[i + 1], temp)
-        vh = interpolate(temp10[i], v10[i], temp10[i + 1], v10[i + 1], temp)
+        vh = interpolate(temp10[i], v10[i], temp10[i - 1], v10[i - 1], temp)
         ul = interpolate(temp5[i], u5[i], temp5[i + 1], u5[i + 1], temp)
         uh = interpolate(temp10[i], u10[i], temp10[i + 1], u10[i + 1], temp)
         hl = interpolate(temp5[i], h5[i], temp5[i + 1], h5[i + 1], temp)
